@@ -57,11 +57,11 @@ career-profile:
 experiences:
   title: Experiences
   info:
-   - role: Chief Technologist
+    - role: Chief Technologist
       time: May 2023 - Present
       company: WeavaCare, Gauteng
       details: |
-        - Strategic Problem solving and technical innovation
+        - Strategic Problem solving and technical nnovation
         - Systems Architecture Design and Development
         - Engineering Process Optimization 
         - Domain Modeling / Reverse Engineering / Product Engineering 
