@@ -1069,6 +1069,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -1801,8 +1805,8 @@ video {
     padding-bottom: 13rem;
   }
 
-  .lg\:pb-62 {
-    padding-bottom: 15.5rem;
+  .lg\:pb-\[35vh\] {
+    padding-bottom: 35vh;
   }
 
   .lg\:pt-16 {

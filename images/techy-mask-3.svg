@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1440 600"
+     width="100%" height="100%"
+     preserveAspectRatio="none"
+     style="position:absolute; inset:0; pointer-events:none;">
+
+  <defs>
+
+    <!-- =============================== -->
+    <!-- CLEANER SCANLINES               -->
+    <!-- =============================== -->
+    <pattern id="scanPattern"
+             width="10" height="10"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(30)">
+
+      <line x1="0" y1="0" x2="0" y2="10"
+            stroke="white"
+            stroke-width="1"
+            stroke-opacity="0.08"/>
+    </pattern>
+
+
+    <!-- =============================== -->
+    <!-- VERTICAL FADE (LESS AGGRESSIVE) -->
+    <!-- =============================== -->
+    <linearGradient id="verticalFade"
+                    x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="60%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0"/>
+    </linearGradient>
+
+
+    <!-- =============================== -->
+    <!-- LIGHT DISTORTION (SUBTLE)       -->
+    <!-- =============================== -->
+    <filter id="lightNoise">
+      <feTurbulence type="fractalNoise"
+                    baseFrequency="0.002"
+                    numOctaves="2"
+                    seed="4"
+                    result="noise"/>
+      <feDisplacementMap in="SourceGraphic"
+                         in2="noise"
+                         scale="12"
+                         xChannelSelector="R"
+                         yChannelSelector="G"/>
+    </filter>
+
+
+    <!-- =============================== -->
+    <!-- MASK LOWERED                    -->
+    <!-- =============================== -->
+    <mask id="techMask" maskUnits="userSpaceOnUse">
+      <rect width="1440" height="600" fill="black"/>
+
+      <!-- Lowered to bottom third -->
+      <rect x="0" y="360" width="1440" height="240"
+            fill="url(#verticalFade)"/>
+    </mask>
+
+  </defs>
+
+
+  <!-- =============================== -->
+  <!-- SCAN FIELD (NO HEAVY BLUR)      -->
+  <!-- =============================== -->
+  <rect width="1440" height="600"
+        fill="url(#scanPattern)"
+        mask="url(#techMask)"
+        filter="url(#lightNoise)"/>
+
+
+  <!-- =============================== -->
+  <!-- CLEAN WAVE CUT                  -->
+  <!-- =============================== -->
+  <path d="
+      M0 0
+      H1440
+      V300
+      C1100 430 600 520 0 450
+      Z"
+        fill="#065F46"/>
+
+</svg>
