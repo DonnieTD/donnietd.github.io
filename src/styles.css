@@ -311,8 +311,9 @@ a:hover {
 
 /* Print: clean single-column CV document, always light */
 @media print {
+  /* No fixed paper size: content fills whatever paper the user picks
+     (a hard-coded A4 gets letter-boxed to the left on US Letter). */
   @page {
-    size: A4;
     margin: 14mm 16mm;
   }
 
