@@ -9,15 +9,23 @@
       content="Donovan van der Linde — Senior Software Engineer. CV and portfolio."
     />
     <title>Donovan van der Linde — Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script>
       // Set theme before first paint to avoid a flash of the wrong theme.
       (function () {
+        var themes = ["light", "dark", "ocean", "sunset"];
         var stored = localStorage.getItem("theme");
         var theme =
-          stored ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light");
+          themes.indexOf(stored) !== -1
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
         document.documentElement.dataset.theme = theme;
       })();
     </script>

@@ -46,8 +46,21 @@ Well written software reads like poetry and I aspire to become a raw logic artis
 
 export const experiences: Experience[] = [
   {
+    role: "Forward Deployed Engineer",
+    time: "Feb 2026 - Present",
+    company: "Sendmarc, London",
+    details: [
+      "AI first software development",
+      "Harness engineering and product development to solve real world problems",
+      "Large scale agentic rewrites of existing software",
+      "Full stack development with React, Typescript, Go, Python and Postgres",
+      "Architecting and implementing solutions for team members and clients",
+      "Direct consultant to Chief Innovation officer",
+    ],
+  },
+  {
     role: "Chief Technologist",
-    time: "May 2023 - Present",
+    time: "May 2023 - Feb 2026",
     company: "WeavaCare, Gauteng",
     details: [
       "Strategic problem solving and technical innovation",
