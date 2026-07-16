@@ -14,6 +14,7 @@ export interface Project {
   title: string;
   link?: string;
   tagline: string;
+  lang?: string;
 }
 
 export interface Skill {
@@ -53,7 +54,7 @@ export const experiences: Experience[] = [
       "AI first software development",
       "Harness engineering and product development to solve real world problems",
       "Large scale agentic rewrites of existing software",
-      "Full stack development with React, Typescript, Go, Python and Postgres",
+      "Full stack development with React, Typescript, Vite on Azure AKS with flux",
       "Architecting and implementing solutions for team members and clients",
       "Direct consultant to Chief Innovation officer",
     ],
@@ -154,38 +155,48 @@ export const experiences: Experience[] = [
   },
 ];
 
-// NOTE: these entries came from the original theme's placeholder data.
-// Replace them with your real projects, or empty the array to hide the section.
+// Pinned repositories from github.com/DonnieTD
 export const projects: Project[] = [
   {
-    title: "Velocity",
-    link: "#",
+    title: "Liminal",
+    link: "https://github.com/DonnieTD/Liminal",
+    lang: "C",
     tagline:
-      "A responsive website template designed to help startups promote, market and sell their products.",
+      "A semantic execution and analysis engine for C that models programs as trajectories through state over time, focusing on the boundaries where behavior transitions, invariants break, and exploits emerge.",
   },
   {
-    title: "DevStudio",
-    link: "#",
+    title: "HML",
+    link: "https://github.com/DonnieTD/HML",
+    lang: "Haskell",
     tagline:
-      "A responsive website template designed to help web developers/designers market their services.",
+      "A minimal, artifact-driven machine learning core where every run is explicit, reproducible, and inspectable.",
   },
   {
-    title: "Tempo",
-    link: "#",
+    title: "giga-arena",
+    link: "https://github.com/DonnieTD/giga-arena",
+    lang: "C",
     tagline:
-      "A responsive website template designed to help startups promote their products or services and to attract users & investors.",
+      "OS-native arena allocator in strict C89 using virtual memory primitives (mmap / VirtualAlloc). Designed for compilers, VMs, and time-phased systems. Benchmarked at ~7× speedup over malloc/free.",
   },
   {
-    title: "Atom",
-    link: "#",
+    title: "giga-hash-map",
+    link: "https://github.com/DonnieTD/giga-hash-map",
+    lang: "C",
     tagline:
-      "A comprehensive website template solution for startups/developers to market their mobile apps.",
+      "Arena-driven hash map in strict C89 with allocator-agnostic design and built-in benchmark. Demonstrates ~1.5× throughput improvement over malloc-backed allocation.",
   },
   {
-    title: "Delta",
-    link: "#",
+    title: "NAH",
+    link: "https://github.com/DonnieTD/NAH",
+    lang: "Go",
+    tagline: "Turing complete Porth compiler and interpreter in Go.",
+  },
+  {
+    title: "GoCrypt",
+    link: "https://github.com/DonnieTD/GoCrypt",
+    lang: "Go",
     tagline:
-      "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps.",
+      "Encrypt/decrypt an entire folder using a Go filewalker, Argon2 for key stretching/derivation and AES for the encryption itself.",
   },
 ];
 

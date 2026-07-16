@@ -585,10 +585,30 @@ a.chip:hover {
   border-color: color-mix(in srgb, var(--accent) 45%, var(--glass-border));
 }
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
 .project h3 {
-  margin: 0 0 0.4rem;
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.project-lang {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
 }
 
 .project p {
@@ -911,9 +931,20 @@ a.chip:hover {
     border-radius: 3pt;
   }
 
+  .project-header {
+    margin-bottom: 1.5pt;
+  }
+
   .project h3 {
     font-size: 10pt;
-    margin-bottom: 1.5pt;
+  }
+
+  .project-lang {
+    font-size: 7.5pt;
+    color: var(--muted);
+    background: none;
+    border: none;
+    padding: 0;
   }
 
   .project p {

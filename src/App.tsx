@@ -84,10 +84,7 @@ function Nav() {
   return (
     <nav className="nav no-print">
       <span className="nav-brand">
-        {profile.name
-          .split(" ")
-          .map((w) => w[0])
-          .join("")}
+        
       </span>
       <div className="nav-controls">
         <div className="theme-picker" role="radiogroup" aria-label="Theme">
@@ -242,15 +239,20 @@ function App() {
               <div className="projects">
                 {projects.map((p) => (
                   <article className="project" key={p.title}>
-                    <h3>
-                      {p.link && p.link !== "#" ? (
-                        <a href={p.link} target="_blank" rel="noreferrer">
-                          {p.title} ↗
-                        </a>
-                      ) : (
-                        p.title
+                    <header className="project-header">
+                      <h3>
+                        {p.link && p.link !== "#" ? (
+                          <a href={p.link} target="_blank" rel="noreferrer">
+                            {p.title} ↗
+                          </a>
+                        ) : (
+                          p.title
+                        )}
+                      </h3>
+                      {p.lang && (
+                        <span className="project-lang">{p.lang}</span>
                       )}
-                    </h3>
+                    </header>
                     <p>{p.tagline}</p>
                   </article>
                 ))}
